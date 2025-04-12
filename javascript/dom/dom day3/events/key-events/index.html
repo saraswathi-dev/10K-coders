@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <input onkeydown="a(event)" type="password" name="password"  placeholder="Enter password">
+    <p id="password"></p>
+    <script>
+        function a(event){
+            document.getElementById("password").innerText="Pressed key :"+event.key
+;        }
+    </script> -->
+
+
+    <input type="password" name="" placeholder="Enter password" id="" oninput="a(event)">
+    <p id="password"></p>
+    <script>
+        function a(event){
+            document.getElementById("password").innerHTML="Value :"+event.target.value;
+        }
+    </script>
+</body>
+</html>

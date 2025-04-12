@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="">Value1:</label>
+    <input type="text" id="input1">
+    <label for="">Value1:</label>
+    <input type="text" id="input2">
+    <button type="submit" onclick="handling()">Submit</button>
+    <p id="main"></p>
+
+    <script>
+        function something(a,b){
+            let A=String(a);
+            let B=String(b);
+            if(A.length==B.length){
+                return true;
+            }else{
+                return false;
+            }
+        }
+        function handling(){
+            let a=document.getElementById("input1").value;
+            let b=document.getElementById("input2").value;
+            let result=something(a,b)
+            document.getElementById("main").innerText=result;
+
+
+        }
+    </script>
+    
+</body>
+</html>

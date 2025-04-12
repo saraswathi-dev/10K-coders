@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button type="button" onmouseenter="DisplayImage()" onmouseleave="DisplayImage2()">Enter mouse</button>
+
+    <script>
+        function DisplayImage() {
+            const img=document.createElement("img")
+            img.src="https://media.istockphoto.com/id/814423752/photo/eye-of-model-with-colorful-art-make-up-close-up.jpg?s=612x612&w=0&k=20&c=l15OdMWjgCKycMMShP8UK94ELVlEGvt7GmB_esHWPYE="
+            document.body.appendChild(img);
+            img.height="100"
+            
+        }
+        function DisplayImage2() {
+            const img=document.createElement("img")
+            img.src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ718nztPNJfCbDJjZG8fOkejBnBAeQw5eAUA&s";
+            document.body.appendChild(img);
+            img.height="100"
+        }
+    </script>
+</body>
+</html>

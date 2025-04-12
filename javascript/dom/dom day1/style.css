@@ -1,0 +1,39 @@
+#cardsContainer{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 20px;
+    border-radius: 20px;
+    justify-content: space-around;
+    align-items: center;
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 20px;
+
+}
+#cardid{
+    padding: 10px;
+    align-items: center;
+    border: 2px solid black;
+    border-radius: 20px;
+    width: 250px;
+    height: 300px;
+    
+
+}
+img{
+    width: 80%;
+    height: 50%;
+}
+#card_btns{
+padding: 10px;
+justify-content: space-around;
+
+
+}
+span{
+    background-color: aqua;
+    color: black;
+    padding: 5px;
+    border-radius: 10px;
+    display: inline;
+}

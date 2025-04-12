@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <label for="text">Enter text:</label>
+    <input type="text" name="" id="text">
+    <button type="button" onclick="handling()">Submit Value</button>
+    <p id="main"></p>
+    <script>
+
+        function something(a) {
+            return "something" + " " + a;
+        }
+        function handling() {
+            let a = document.getElementById("text").value;
+            let result = something(a);
+            document.getElementById("main").innerText = result;
+
+        }
+        // x=something(input)
+    </script>
+</body>
+
+</html>

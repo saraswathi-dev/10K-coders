@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="input1">Enter Age in years:</label>
+    <input type="number" id="input1">
+    <button type="button" onclick="get_days()">Get Days</button>
+    <p id="days"></p>
+    <script>
+        function get_days(){
+            var years=Number(document.getElementById("input1").value);
+            let days=years*365;
+            document.getElementById("days").textContent=days;
+            console.log(days);
+
+        }
+
+    </script>
+</body>
+</html>
