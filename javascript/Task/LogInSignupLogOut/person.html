@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="personName">Enter name</label>
+    <input id="personName" type="text" placeholder="Enter Person Name">
+    <button onclick="handleNameSubmit(event)" type="submit">Submit</button>
+
+    <li id="listNames"></li>
+    <script>
+       
+        function handleNameSubmit(e){
+            let storedNames=JSON.parse(localStorage.getItem("name"))  || [];
+            let InputName=document.getElementById("personName").value.trim();
+            storedNames.push(InputName) 
+            localStorage.setItem("name",JSON.stringify(storedNames))
+            InputName.value="";   //to reset input fields
+            e.target.reset();  //to reset input fields ,it will work when you use form
+            displayNames(storedNames)
+        }
+        function displayNames(namesStored){
+            let listNames=document.getElementById("listNames")
+            listNames.innerHTML=""; // clears existing list
+            //console.log(namesStored)
+            storedNames.forEach((x)=>{
+                let liTag=document.createElement("li")
+                liTag.innerText=x;
+                document.listNames.appendChild(liTag);
+
+            })
+
+
+        }
+    </script>
+</body>
+</html>

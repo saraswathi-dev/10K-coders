@@ -8,6 +8,5 @@ def moving_elements():
         return lst1 + lst2
     else:
         print("shift_value not greater than len(lst)")
-
 x=moving_elements()
 print(x)

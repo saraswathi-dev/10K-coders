@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <label for="original_array">Original Array:</label>
+    <input type="text" id="original_array">
+    <label for="remove_array">Array need to be removed:</label>
+    <input type="text" id="remove_array">
+    <button type="submit" onclick="remove_array()">Submit Values</button>
+    <p id="demo"></p>
+    <p id="demo1"></p>
+    <script>
+
+        function remove_array() {
+            var original_arr = document.getElementById("original_array").value;
+            if (original_arr) {
+                original_arr = original_arr.split(",");
+                var remove_array = document.getElementById("remove_array").value;
+                if (remove_array) {
+                    remove_array = remove_array.split(",");
+                    var tem_array = [];
+                    for (var i = 0; i < remove_array.length; i++) {
+                        if (remove_array[i]) {
+                            for (var j = 0; j < original_arr.length; j++) {
+                                if (remove_array[i] == original_arr[j]) {
+                                    original_arr.splice(j,1);
+                                    tem_array.push(remove_array[i]);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            items_temoved = document.getElementById("demo").innerHTML = tem_array;
+            items_remain = document.getElementById("demo1").innerHTML = original_arr;
+        }
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,25 @@
+#main{
+    width:95%;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 20px;
+    padding: 20px;
+    align-items: center;
+    margin: auto;
+    border-radius: 30px;
+    background-color: rgb(241, 237, 231);
+}
+#card{
+    border: 2px solid orange;
+    background-color: rgb(246, 177, 246);
+    border-radius: 20px;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+img{
+    height:200px;
+    width: 250px;
+    border-radius: 20px;
+}

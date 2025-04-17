@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="randomColor">Get Color</button>
+    <script>
+        let randomcolor=document.getElementById("randomColor")
+        randomcolor.addEventListener("click",()=>{
+            randomColorGenerator()
+        });
+
+        function randomColorGenerator(){
+            let hexUsages="123456789ABCDEF";
+            let hexColor="#";
+            for(let i=0;i<6;i++){
+                hexValue=Math.floor(Math.random()*hexUsages.length);
+                hexColor+=hexValue;
+            }
+            document.body.style.backgroundColor=hexColor;
+
+        }
+
+    </script>
+</body>
+</html>

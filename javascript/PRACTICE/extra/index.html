@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Header</title>
+    <style>
+        #header{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        border: 2px groove black;
+        align-items: center;
+        padding: 20px;
+        }
+        #list{
+            list-style-type: none;
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-end; 
+            gap: 20px;
+         }
+    </style>
+</head>
+<body>
+    <header>
+        <div id="header">
+            <div id="heading">
+                <h1>Heading</h1>
+            </div>
+            <div>
+                <ul id="list">
+                    <li>Home</li>
+                    <li>About</li>
+                    <li>Contact</li>
+                    <li>Projects</li>
+                </ul>
+            </div>
+        </div>
+    </header>
+</body>
+</html>

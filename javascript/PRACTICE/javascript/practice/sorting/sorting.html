@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="demo"></p>
+    <script>
+        var arr=[90,20,34,56,4,65,12];
+        var n=arr.length
+        for (i=0;i<n;i++) {
+            for(j=i+1;j<n;j++)
+                if(arr[j]>arr[i]){
+                    [arr[i],arr[j]]=[arr[j],arr[i]]   
+                }
+        }
+        console.log(arr)
+        document.getElementById("demo").innerText=arr;
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>   
+ var arr = [1, 2, 3, 4, 5, 6, 7, 8, 78, 0, 99, 9];
+ var biggestNumber = arr[0];
+ var newArr = [];
+ for (let i = 1; i < arr.length; i++) {
+     if (arr[i] > biggestNumber) {
+         biggestNumber = arr[i];
+         newArr.push(arr[i]);
+     }
+}
+
+ document.getElementById("demo").innerText = "Biggest :" + biggestNumber;
+         x=arr.indexOf(biggestNumber);
+         // console.log(x);
+         var newArr2=arr.splice(x,1);
+         // console.log(arr);
+         var newArr2=arr;
+         // console.log(newArr2);
+ var secondLargestNumber = newArr2[0];
+ for (let i = 1; i < newArr2.length; i++) {
+     if (newArr2[i] > secondLargestNumber) {
+         secondLargestNumber = newArr2[i];
+
+     } else {
+         secondLargestNumber;
+     }
+ }
+ document.getElementsByClassName("demo")[0].innerText = "Second Largest Number :" + secondLargestNumber;
+
+    </script>
+</body>
+</html>

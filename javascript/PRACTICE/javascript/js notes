@@ -1,0 +1,73 @@
+functions:
+It is a piece of code that can be reusable when ever we call it.Then we call the function or invoking the function
+
+-->Writing function is called function declaration
+syntax:
+
+function colorChange(){
+    code to execute
+}
+colorChange()
+
+
+Array Methods:
+--------------
+push(),pop(),shift(),unshift(),splice().........,forEach(),filter(),map(),reduce(),slice(),splice()
+
+splice():
+---------
+splice(start,deletecount,item1,item2)---> items are adding at deleted place --->doing changes to same array
+splice(3,2,"saru","manu")
+
+slice():
+-------
+slice(start,end+1)
+
+includes():
+------------
+checks wether element exist in the array or not
+-- fruits=["banana","mango"]
+-- fruitexist=fruits.includes("banana")
+
+filter():
+------
+const xyz=data.filter((x)=>x.price>100) ---->returns new array
+
+map():
+-------
+const xyz=data.map((x)=>x.id+1) ------> return new array
+
+forEach():
+--------------
+const xyz=data.forEach((x)=>x.category==="electronics") ---->it does't creates new array it is used for iteration purpose only
+sort():
+-------
+const b=[1,5,7,9]
+const xyz=b.sort((a,b)=>a-b)
+
+reverse():
+----------
+const b=[1,5,7,9]
+const xyz=b.reverse(b)
+
+
+
+string methods:
+-----------------
+
+toLoweCase(),toUpperCase(),startsWith(),endsWith(),slice(),trim()
+
+
+
+
+
+function call:
+--------------
+
+function xyz(abc){
+    abc()
+
+}
+xyz( function hello(){
+    console.log("hello")
+})
