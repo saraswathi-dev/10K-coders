@@ -14,11 +14,11 @@
         });
 
         function randomColorGenerator(){
-            let hexUsages="123456789ABCDEF";
+            let hexUsages="0123456789ABCDEF";
             let hexColor="#";
             for(let i=0;i<6;i++){
                 hexValue=Math.floor(Math.random()*hexUsages.length);
-                hexColor+=hexValue;
+                hexColor+=hexUsages[hexValue];
             }
             document.body.style.backgroundColor=hexColor;
 

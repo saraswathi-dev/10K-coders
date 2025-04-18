@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <label for="taskInput">Add Task:</label>
+    <input type="text" name="" id="taskInput">
+    <button>Submit</button>
+    <div id="taskContainer"></div>
+    <script>
+
+        document.querySelector("button").addEventListener("click", () => {
+            let inputTag = document.getElementById("taskInput").value.trim();
+            if (inputTag == '') {
+                alert("enter a task!!")
+            }
+            let taskContainer = document.getElementById("taskContainer");
+            let taskDiv = document.createElement("div");
+            let taskPara = document.createElement("p");
+            taskPara.innerText = inputTag;
+            let deleteButton = document.createElement("button");
+            deleteButton.innerText = "Delete";
+            deleteButton.addEventListener("click", () => {
+                taskDiv.remove()
+            })
+            let editButton = document.createElement("button")
+            editButton.innerText = "Edit";
+            editButton.addEventListener("click", () => {
+                let newTask = prompt("edit your task:");
+                taskPara.innerText = newTask.trim();
+            });
+
+
+            taskContainer.appendChild(taskDiv);
+            taskDiv.append(taskPara, deleteButton, editButton);
+
+        });
+    </script>
+</body>
+
+</html>
