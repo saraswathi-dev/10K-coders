@@ -1,6 +1,7 @@
 def counting_element():
-    lst1= input("Enter value:")
-    lst=list(lst1)
+    # lst1= input("Enter value:")
+    lst=[1,9,4,7,2,3,8,6,2,3,7,9,5,10,2]
+    # lst=list(lst1)
     no_duplicate_lst=[]
     for i in lst:
         if i not in no_duplicate_lst:
@@ -13,7 +14,7 @@ def counting_element():
             if i==j:
                 count=count+1
         result.append((j,count))
-    # print(result)
+    print(result)
     for i in range(len(result)):
         print("{}{}".format((result[i][0]),(result[i][1])),end=" ")
 counting_element()

@@ -1,5 +1,5 @@
 def re_arrange():
-    lst=[1,9,4,7,2,3,8,6,10,5]
+    lst=[1,9,4,7,2,3,8,6,10,5,2]
     for i in range(0,len(lst)):
         for j in range(i+1,len(lst)):
             if lst[i]>lst[j]:
