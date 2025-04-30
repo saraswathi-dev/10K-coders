@@ -1,0 +1,45 @@
+*{
+    margin: auto;
+    box-sizing: border-box;
+}
+body{
+     background-color: azure;
+
+}
+header{
+    height: 15vh;
+    background-color: rgb(178, 212, 241);
+    position:sticky;
+    margin: 10px;
+}
+
+#main{
+    border: 1px solid grey;
+    border-radius: 20px;
+    margin: auto;
+    /* position: relative; */
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    height: 300px;
+    line-height:2;
+    background:linear-gradient(to bottom, rgb(178, 212, 241),white); 
+
+   
+}
+button{
+    border: 1px solid rgb(103, 180, 247);
+    margin: 10px;
+    border-radius: 10px;
+    padding: 5px;
+    background-color: rgb(103, 180, 247);
+}
+
+#signup{
+    display: flex;
+    flex-direction: column;
+}
+#signin{
+    display: inline;
+    justify-content: space-around;
+}

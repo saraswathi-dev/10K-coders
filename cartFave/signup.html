@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/signup.css">
+</head>
+
+<body>
+    <header>
+        
+    </header>
+    <div id="main">
+        <h3><u>Sign Up Form</u></h3>
+        <form action="" onsubmit="handleSubmitSignup(event)">
+            <div id="signup">
+                <label for="signupName">Username</label>
+                <input type="text" placeholder="Enter Username" id="signupName" required>
+                <label for="signupEmail">Email</label>
+                <input type="email" placeholder="Enter Email" id="signupEmail" required>
+                <label for="signupPassword">Password</label>
+                <input type="password" name="" id="signupPassword" placeholder="Enter password" required>
+                <button type="submit">Signup</button>
+            </div>
+            <div id="signin">
+                <p>Already have account <a href="./signin.html">Signin</a></p>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        function handleSubmitSignup(e) {
+            e.preventDefault()
+            let signupName = document.getElementById("signupName").value.trim();
+            let signupEmail = document.getElementById("signupEmail").value.trim();
+            let signupPassword = document.getElementById("signupPassword").value.trim();
+
+            let allUsers = JSON.parse(localStorage.getItem("allUsers")) || [];
+            const existedUsers=allUsers.find((x)=>x.email===signupEmail);
+            if (existedUsers){
+                alert("user already exist")
+            }
+            let newUser={
+                name:signupName,
+                email:signupEmail,
+                password:signupPassword
+            }
+            allUsers.push(newUser);
+            localStorage.setItem("allUsers",JSON.stringify(allUsers));
+            window.location.href="signin.html";
+        }
+    </script>
+</body>
+
+</html>
