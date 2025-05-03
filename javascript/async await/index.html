@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div id="main"></div>
+    <script>
+        async function getData() {
+            let response = await fetch("https://dummyjson.com/recipes")
+            let data = await response.json()
+            console.log(data)
+            let cardContainer = document.createElement("div");
+            cardContainer.id = "card_container";
+
+            for (let i = 0; i <= data.recipes.length; i++) {
+                let card = document.createElement("div");
+                card.id = "cardDiv";
+                let image = document.createElement("img");
+                console.log(image, "img")
+                let h3tag = document.createElement("h3");
+                let buttonDiv = document.createElement("div")
+                buttonDiv.innerHTML = `
+                    <button id="recipe">Show Recipe</button>
+                    <button id="ingrediants">Show Ingrediants</button>`
+
+                buttonDiv.id = "buttonsDiv"
+                image.setAttribute("src", data.recipes[i].image);
+                image.alt = "image";
+                image.height = 200;
+                image.width = 150;
+
+                h3tag.innerText = data.recipes[i].name;
+                let mainDiv = document.getElementById("main");
+                mainDiv.appendChild(cardContainer);
+                cardContainer.appendChild(card);
+                card.append(image, h3tag, buttonDiv)
+            }
+        } getData()
+    </script>
+</body>
+
+</html>
